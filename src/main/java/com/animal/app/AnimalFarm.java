@@ -2,6 +2,7 @@ package com.animal.app;
 
 import com.animal.app.animals.Cat;
 import com.animal.app.animals.Dog;
+import com.animal.app.animals.Lion;
 import com.animal.app.animals.Sheep;
 
 public class AnimalFarm {
@@ -11,12 +12,20 @@ public class AnimalFarm {
             return new Cat();
             
         }
+
         if (kind.equals("dog")) {
             return new Dog();
+
         }
+
+        if (kind.equals("lion")) {
+            return new Lion();
+
+        }
+
         if (kind.equals("sheep")) {
             return new Sheep();
-            
+
         }
 
         return new Animal(kind);
