@@ -8,7 +8,7 @@ import com.animal.app.animals.Sheep;
 
 public class AnimalFarm {
 
-    public static Animal createAnimal(String kind) {
+    public static Animal buildAnimal(String kind) {
         if (kind.equals("cat")) {
             return new Cat();
             
@@ -44,7 +44,7 @@ public class AnimalFarm {
         }
         Farm animalFarm = new Farm();
         for (String animalKind : args) {
-            animalFarm.addAnimal(createAnimal(animalKind));
+            animalFarm.addAnimal(buildAnimal(animalKind));
         }
         animalFarm.printContents();
     }
